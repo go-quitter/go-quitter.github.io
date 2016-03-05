@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Go-quitter by aerth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Go-quitter</h1>
+      <h2 class="project-tagline">GNU Social Client and Go Library #RIPTwitter </h2>
+      <a href="https://github.com/aerth/go-quitter" class="btn">View on GitHub</a>
+      <a href="https://github.com/aerth/go-quitter/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/aerth/go-quitter/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="go-quitter" class="anchor" href="#go-quitter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>go-quitter</h1>
+
+<p>GNU Social Library and Command line <strong>GNU Social</strong> client</p>
+
+<p><a href="https://godoc.org/github.com/aerth/go-quitter"><img src="https://godoc.org/github.com/aerth/go-quitter?status.svg" alt="GoDoc"></a></p>
+
+<div class="highlight highlight-source-go"><pre>
+$ <span class="pl-k">go</span>-quitter help
+
+##########  <span class="pl-k">go</span>-quitter v0<span class="pl-c1">.0.7</span>   ##############################
+
+      <span class="pl-v">Copyright</span> <span class="pl-c1">2016</span> aerth@sdf.<span class="pl-smi">org</span>
+
+<span class="pl-k">go</span>-quitter config       <span class="pl-v">Creates</span> config file
+<span class="pl-k">go</span>-quitter read         <span class="pl-v">Reads</span> <span class="pl-c1">20</span> new posts
+<span class="pl-k">go</span>-quitter read fast        <span class="pl-v">Reads</span> <span class="pl-c1">20</span> new <span class="pl-c1">posts</span> (no delay)
+<span class="pl-k">go</span>-quitter home         <span class="pl-v">Your</span> home timeline.
+<span class="pl-k">go</span>-quitter user username    <span class="pl-v">Looks</span> up <span class="pl-s"><span class="pl-pds">"</span>username<span class="pl-pds">"</span></span> timeline
+<span class="pl-k">go</span>-quitter post ____        <span class="pl-v">Posts</span> to your node.
+<span class="pl-k">go</span>-quitter post         <span class="pl-v">Post</span> mode.
+<span class="pl-k">go</span>-quitter mentions     <span class="pl-v">Mentions</span> your @name
+<span class="pl-k">go</span>-quitter search ___       <span class="pl-v">Searches</span> <span class="pl-k">for</span> ____
+<span class="pl-k">go</span>-quitter search       <span class="pl-v">Search</span> mode.
+<span class="pl-k">go</span>-quitter follow       <span class="pl-v">Follow</span> a user
+<span class="pl-k">go</span>-quitter unfollow     <span class="pl-v">Unfollow</span> a user
+<span class="pl-k">go</span>-quitter groups       <span class="pl-v">List</span> all groups on current node
+<span class="pl-k">go</span>-quitter mygroups     <span class="pl-v">List</span> only groups you are member of
+<span class="pl-k">go</span>-quitter join ___     <span class="pl-v">Join</span> a !group
+<span class="pl-k">go</span>-quitter leave ___        <span class="pl-v">Part</span> a !<span class="pl-c1">group</span> (can also use part)
+
+
+Set your <span class="pl-v">GNUSOCIALNODE</span> environmental variable to change nodes.
+For example: <span class="pl-s"><span class="pl-pds">"</span>export GNUSOCIALNODE=gs.sdf.org<span class="pl-pds">"</span></span> in your ~/.<span class="pl-smi">shrc</span> or ~/.<span class="pl-smi">profile</span>
+
+################################################################################
+
+</pre></div>
+
+<h2>
+<a id="install-binary-for-your-os-now-for-every-os" class="anchor" href="#install-binary-for-your-os-now-for-every-os" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install binary for your OS (now for every OS)</h2>
+
+<h3>
+<a id="latest-binary-releases" class="anchor" href="#latest-binary-releases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/aerth/go-quitter/releases">Latest Binary Releases</a>
+</h3>
+
+<p><a href="https://github.com/aerth/go-quitter/releases/download/v0.0.7/go-quitter-v0.0.7.exe">Windows</a> | 
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">Linux</a> | 
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">FreeBSD</a> | 
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">NetBSD</a> | 
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">OS X</a> | 
+<a href="https://github.com/aerth/go-quitter/releases">Other OS or Architecture</a></p>
+
+<h2>
+<a id="install-from-go-source" class="anchor" href="#install-from-go-source" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install from Go source</h2>
+
+<p>If you have Go toolchain installed you can build it yourself with:</p>
+
+<div class="highlight highlight-source-shell"><pre>GOPATH=/tmp/go go get -v -u github.com/aerth/go-quitter/cmd/go-quitter
+<span class="pl-c1">cd</span> <span class="pl-smi">$GOPATH</span>/src/github.com/aerth/go-quitter/cmd/go-quitter
+make <span class="pl-k">&amp;&amp;</span> sudo make install</pre></div>
+
+<p>Or use go get:</p>
+
+<pre><code>go get -v -u github.com/aerth/go-quitter/cmd/go-quitter
+
+</code></pre>
+
+<h2>
+<a id="configure" class="anchor" href="#configure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configure</h2>
+
+<p>To avoid storing the password in plaintext, go-quitter saves an encrypted config file at ~/.go-quitter, if it gets messed up just delete it and make a new one. You can switch config files on the fly using the environmental variable GNUSOCIALPATH.</p>
+
+<pre><code>go-quitter config
+GNUSOCIALPATH=gnusocial.de go-quitter config
+GNUSOCIALPATH=gnusocial.no go-quitter config
+GNUSOCIALPATH=gnusocial.se go-quitter config
+
+</code></pre>
+
+<p>Next time you run it, it will ask for your config password. I like to keep it blank so I just hit ENTER.</p>
+
+<h2>
+<a id="or-use-in-scripts" class="anchor" href="#or-use-in-scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Or.. Use in scripts</h2>
+
+<p>For automation, scripts, and cronjobs, you may want to delete config file and use environmental variables instead. Something like…</p>
+
+<pre><code>// cat ~/.shrc || cat ~/.zshrc || cat ~/.bashrc || cat ~/.whatrc
+export GNUSOCIALUSER=yourname
+export GNUSOCIALPASS=yourpass
+export GNUSOCIALNODE=gnusocial.de
+
+// then run this command so you dont have to log out and back in.
+. ~/.shrc
+
+
+// make sure you chmod your shell rc file if shared machine.
+chmod o-r ~/.shrc
+chmod g-r ~/.shrc
+
+## Usage
+
+When running go-quitter with no arguments, a list of commands is printed.
+For more information, run `go-quitter help`
+
+```shell
+
+$ go-quitter read // public timeline
+$ go-quitter home // home timeline
+$ go-quitter search // enters search mode
+$ go-quitter post \!group \#hashtag \#EscapeSymbolsWithABackslash
+</code></pre>
+
+<p>Default node is gs.sdf.org! Hosted on the SDF Public Access UNIX System.</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c">#!/bin/sh                                                                       </span>
+<span class="pl-c1">unset</span> GNUSOCIALNODE                                                             
+go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> tweet.log                                                   
+GNUSOCIALNODE=gnusocial.de go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log                         
+GNUSOCIALNODE=quitter.es go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log                           
+GNUSOCIALNODE=shitposter.club go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log                      
+GNUSOCIALNODE=sealion.club go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log   
+</pre></div>
+
+<h3>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Todo</h3>
+
+<ul>
+<li>[ ] Include user interface with up/down scrolling</li>
+<li>[ ] Write tests</li>
+<li>[ ] cat filename.txt | go-quitter // I may introduce this just because it would make uploading photos easy.</li>
+</ul>
+
+<h3>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h3>
+
+<ul>
+<li>Pull requests are welcome.</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/aerth/go-quitter">Go-quitter</a> is maintained by <a href="https://github.com/aerth">aerth</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
