@@ -5,17 +5,24 @@
     <title>Go-quitter by aerth</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Go-quitter</h1>
-      <h2 class="project-tagline">GNU Social Client and Go Library #RIPTwitter </h2>
+      <h1 class="project-name">go-quitter</h1>
+      <h2 class="project-tagline">Console GNU Social Client and Go Library</h2>
       <a href="https://github.com/aerth/go-quitter" class="btn">View on GitHub</a>
-      <a href="https://github.com/aerth/go-quitter/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/aerth/go-quitter/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="https://github.com/aerth/go-quitter/zipball/master" class="btn">Download Source .zip</a>
+      <a href="https://github.com/aerth/go-quitter/tarball/master" class="btn">Download Source .tar.gz</a>
+      <a href="https://github.com/aerth/go-quitter/releases" class="btn">Latest Releases</a><br>
+      <a href="https://github.com/aerth/go-quitter/releases/download/v0.0.7/go-quitter-v0.0.7.exe" class="btn small">Windows</a>
+      <a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_osx-amd64.tar.gz" class="btn small">OS X</a>
+      <a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz" class="btn small">Linux</a>
+      <a href="https://github.com/aerth/go-quitter/releases" class="btn btn-small">Other</a>
+      <a href="https://github.com/aerth/go-quitter/releases" class="btn btn-small">HASHSUMs</a>
+      <a href="https://github.com/aerth/go-quitter/issues/new" class="btn small">Contribute / Bugs</a>
     </section>
 
     <section class="main-content">
@@ -65,11 +72,11 @@ For example: <span class="pl-s"><span class="pl-pds">"</span>export GNUSOCIALNOD
 <a id="latest-binary-releases" class="anchor" href="#latest-binary-releases" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/aerth/go-quitter/releases">Latest Binary Releases</a>
 </h3>
 
-<p><a href="https://github.com/aerth/go-quitter/releases/download/v0.0.7/go-quitter-v0.0.7.exe">Windows</a> | 
-<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">Linux</a> | 
-<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">FreeBSD</a> | 
-<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">NetBSD</a> | 
-<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">OS X</a> | 
+<p><a href="https://github.com/aerth/go-quitter/releases/download/v0.0.7/go-quitter-v0.0.7.exe">Windows</a> |
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">Linux</a> |
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">FreeBSD</a> |
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">NetBSD</a> |
+<a href="https://github.com/aerth/go-quitter/releases/download/v0.0.6/go-quitter-v0.0.6_linux-amd64.tar.gz">OS X</a> |
 <a href="https://github.com/aerth/go-quitter/releases">Other OS or Architecture</a></p>
 
 <h2>
@@ -135,12 +142,12 @@ $ go-quitter post \!group \#hashtag \#EscapeSymbolsWithABackslash
 <p>Default node is gs.sdf.org! Hosted on the SDF Public Access UNIX System.</p>
 
 <div class="highlight highlight-source-shell"><pre><span class="pl-c">#!/bin/sh                                                                       </span>
-<span class="pl-c1">unset</span> GNUSOCIALNODE                                                             
-go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> tweet.log                                                   
-GNUSOCIALNODE=gnusocial.de go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log                         
-GNUSOCIALNODE=quitter.es go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log                           
-GNUSOCIALNODE=shitposter.club go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log                      
-GNUSOCIALNODE=sealion.club go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log   
+<span class="pl-c1">unset</span> GNUSOCIALNODE
+go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> tweet.log
+GNUSOCIALNODE=gnusocial.de go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log
+GNUSOCIALNODE=quitter.es go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log
+GNUSOCIALNODE=shitposter.club go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log
+GNUSOCIALNODE=sealion.club go-quitter <span class="pl-c1">read</span> fast <span class="pl-k">&gt;&gt;</span> treet.log
 </pre></div>
 
 <h3>
@@ -167,6 +174,6 @@ GNUSOCIALNODE=sealion.club go-quitter <span class="pl-c1">read</span> fast <span
 
     </section>
 
-  
+
   </body>
 </html>
